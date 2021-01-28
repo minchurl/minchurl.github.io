@@ -26,49 +26,58 @@ titles:
 key: page-about
 ---
 
-![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.jpg)
 
-TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
 
-```javascript
-(() => console.log('Hello, World!'))();
-```
+# 소개
 
-## Features
+Competitive Programmer
+[CV](https://kaistackr-my.sharepoint.com/:b:/g/personal/minchurl_kaist_ac_kr/Edmk83IxJ9ZKpcsDOZabb1kB0aU3jU5JXWD_-xHleCO7BA?e=P2pjkY)
 
-- Responsive
-- Semantic HTML
-- Skins
-- Highlight Theme
-- Internationalization
-- Search
-- Table of contents
-- Authors
-- Additional styles (alert, tag, image, icon, button, grid, etc)
-- Extensions (audios, videos, slides, demos)
-- Markdown enhancements ([MathJax](https://www.mathjax.org/), [mermaid](https://mermaidjs.github.io/), [chartjs](http://www.chartjs.org/))
-- Sharing ([AddToAny](https://www.addtoany.com/), [AddThis](https://www.addthis.com/))
-- Comments ([Disqus](https://disqus.com/), [Gitalk](https://gitalk.github.io/), [Valine](https://valine.js.org/en/))
-- Pageview ([LeanCloud](https://leancloud.cn/))
-- Analytics ([Google Analytics](https://analytics.google.com/analytics/web/))
-- RSS ([jekyll-feed](https://github.com/jekyll/jekyll-feed))
+## 학력 / 소속
 
-## Skins
+### 학교
 
-TeXt has 6 built-in skins, you can also set up your own skin.
+* 한국과학기술원 전산학부 (2021 - Current)
+* 한국과학기술원 새내기과정학부 (2020 - 2021)
+* 동화고등학교 (2018 - 2019)
 
-| `default` | `dark` | `forest` |
-| --- |  --- | --- |
-| ![Default](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_default.jpg) | ![Dark](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_dark.jpg) | ![Forest](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_forest.jpg) |
+### 동아리
 
-| `ocean` | `chocolate` | `orange` |
-| --- |  --- | --- |
-| ![Ocean](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_ocean.jpg) | ![Chocolate](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_chocolate.jpg) | ![Orange](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_orange.jpg) |
+* 한국과학기술원 알고리즘동아리 RUN (2020 - Current)
 
-### Highlight Theme
+### 기타
 
-TeXt use [Tomorrow](https://github.com/chriskempson/tomorrow-theme) as the highlight theme.
+* 국제정보올림피아드 계속반 겨울학기 수료 (2019.01)
+* 국제정보올림피아드 계속반 여름학기 수료 (2018.07-08)
+* 국제정보올림피아드 처음반 겨울학기 수료 (2018.01)
+* 국제정보올림피아드 처음반 여름학기 수료 (2018.07-08)
 
-| `tomorrow` | `tomorrow-night` | `tomorrow-night-eighties` | `tomorrow-night-blue` | `tomorrow-night-bright` |
-| --- |  --- | --- | --- |  --- |
-| ![Tomorrow](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow.png) | ![Tomorrow Night](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night.png) | ![Tomorrow Night Eighties](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-eighties.png) | ![Tomorrow Night Blue](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-blue.png) | ![Tomorrow Night Bright](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-bright.png) |
+## 온라인 저지 프로필
+
+* BOJ: [fefe](https://www.acmicpc.net/user/fefe)
+* Codeforces: [fefe](https://codeforces.com/profile/fefe)
+
+## 대회 참가 / 수상
+
+* International Collagiate Programming Contest(ACM-ICPC), ICPC
+  * 10th place, 2020 ICPC Seoul Regional Contest (Nov. 2020)
+  * 8th place, 2020 ICPC Seoul Regional First Round Contest (Oct. 2020)
+* 17th place, UCPC 2020 (Aug. 2020)
+* Korea Olympiad in Informatics(KOI), NIA
+  * Gold Prize, 2015 Korea Olympiad in Informatics (Aug. 2015)
+  * Silver Prize, 2016 Korea Olympiad in Informatics (Aug. 2016)
+  * Gold Prize, 2017 Korea Olympiad in Informatics (Aug. 2017)
+  * Gold Prize, 2018 Korea Olympiad in Informatics (Aug. 2018)
+* Asia-Pacific Informatics Olympiad
+  * Silver Prize, 2018 Asia-Pacific Informatics Olympiad (May. 2018)
+  * Silver Prize, 2019 Asia-Pacific Informatics Olympiad (May. 2019)
+* 6th place,10th KAIST ICPC Mock Competition (Oct. 2020)
+* Nexon Youth Programming Challenge, Nexon
+  * Finalist, 2016 Nexon Youth Programming Challenge (Nov. 2016)
+  * Finalist, 2017 Nexon Youth Programming Challenge (Nov. 2017)
+  * Finalist, 2018 Nexon Youth Programming Challenge (Nov. 2018)
+  * Finalist, 2019 Nexon Youth Programming Challenge (Nov. 2019)
+
+## 대회 운영
+
+* 제6회 경기북과학고등학교 프로그래밍 대회 검수 ([Codeup](https://codeup.kr/contest.php?cid=3692))
