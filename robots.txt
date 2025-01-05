@@ -1,0 +1,1 @@
+User-agent: * Disallow: Sitemap: https://minchurl.github.io/sitemap.xml
