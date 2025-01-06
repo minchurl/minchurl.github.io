@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"> <html><body> <h1 id="welcome-to-slidev">Welcome to Slidev</h1> <p>Presentation slides for developers</p> <p>&lt;div @click=”$slidev.nav.next” class=”mt-12 py-1” hover:bg=”white op-10”&gt; Press Space for next page <carbon:arrow-right></carbon:arrow-right> &lt;/div&gt;</p> <div class="abs-br m-6 text-xl"> &lt;button @click="$slidev.nav.openInEditor" title="Open in Editor" class="slidev-icon-btn"&gt; <carbon:edit></carbon:edit> &lt;/button&gt; <a href="https://github.com/slidevjs/slidev" target="_blank" class="slidev-icon-btn" rel="external nofollow noopener"> <carbon:logo-github></carbon:logo-github> </a> </div> <hr> <h2 id="transition-fade-out">transition: fade-out</h2> <h1 id="what-is-slidev">What is Slidev?</h1> <p>Slidev is a slides maker and presenter designed for developers, consist of the following features</p> <ul> <li>📝 <strong>Text-based</strong> - focus on the content with Markdown, and then style them later</li> <li>🎨 <strong>Themable</strong> - themes can be shared and re-used as npm packages</li> <li>🧑‍💻 <strong>Developer Friendly</strong> - code highlighting, live coding with autocompletion</li> <li>🤹 <strong>Interactive</strong> - embed Vue components to enhance your expressions</li> <li>🎥 <strong>Recording</strong> - built-in recording and camera view</li> <li>📤 <strong>Portable</strong> - export to PDF, PPTX, PNGs, or even a hostable SPA</li> <li>🛠 <strong>Hackable</strong> - virtually anything that’s possible on a webpage is possible in Slidev <br> <br> </li> </ul> <p>Read more about <a href="https://sli.dev/guide/why" rel="external nofollow noopener" target="_blank">Why Slidev?</a></p> <style>h1{background-color:#2b90b6;background-image:linear-gradient(45deg,#4ec5d4 10%,#146b8c 20%);background-size:100%;-webkit-background-clip:text;-moz-background-clip:text;-webkit-text-fill-color:transparent;-moz-text-fill-color:transparent}</style> <hr> <p>transition: slide-up level: 2</p> <hr> <h1 id="navigation">Navigation</h1> <p>Hover on the bottom-left corner to see the navigation’s controls panel, <a href="https://sli.dev/guide/ui#navigation-bar" rel="external nofollow noopener" target="_blank">learn more</a></p> <h2 id="keyboard-shortcuts">Keyboard Shortcuts</h2> <table> <thead> <tr> <th> </th> <th> </th> </tr> </thead> <tbody> <tr> <td> <kbd>right</kbd> / <kbd>space</kbd> </td> <td>next animation or slide</td> </tr> <tr> <td> <kbd>left</kbd> / <kbd>shift</kbd><kbd>space</kbd> </td> <td>previous animation or slide</td> </tr> <tr> <td><kbd>up</kbd></td> <td>previous slide</td> </tr> <tr> <td><kbd>down</kbd></td> <td>next slide</td> </tr> </tbody> </table> <p><img v-click="" class="absolute -bottom-9 -left-7 w-80 opacity-50" src="https://sli.dev/assets/arrow-bottom-left.svg" alt=""></p> <p v-after="" class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p> <hr> <p>layout: two-cols layoutClass: gap-16</p> <hr> <h1 id="table-of-contents">Table of contents</h1> <p>You can use the <code class="language-plaintext highlighter-rouge">Toc</code> component to generate a table of contents for your slides:</p> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;Toc</span> <span class="na">minDepth=</span><span class="s">"1"</span> <span class="na">maxDepth=</span><span class="s">"1"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div> <p>The title will be inferred from your slide content, or you can override it with <code class="language-plaintext highlighter-rouge">title</code> and <code class="language-plaintext highlighter-rouge">level</code> in your frontmatter.</p> <p>::right::</p> <toc text-sm="" mindepth="1" maxdepth="2"></toc> <hr> <p>layout: image-right image: https://cover.sli.dev</p> <hr> <h1 id="code">Code</h1> <p>Use code snippets and get the highlighting directly, and even types hover!</p> <p>```ts {all|5|7|7-8|10|all} twoslash // TwoSlash enables TypeScript hover information // and errors in markdown code blocks // More at https://shiki.style/packages/twoslash</p> <p>import { computed, ref } from “vue”;</p> <p>const count = ref(0); const doubled = computed(() =&gt; count.value * 2);</p> <p>doubled.value = 2;</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+&lt;arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" /&gt;
+
+&lt;!-- This allow you to embed external code blocks --&gt;
+
+&lt;&lt;&lt; @/snippets/external.ts#snippet
+
+&lt;!-- Footer --&gt;
+
+[Learn more](https://sli.dev/features/line-highlighting)
+
+&lt;!-- Inline style --&gt;
+&lt;style&gt;
+.footnotes-sep {
+  @apply mt-5 opacity-10;
+}
+.footnotes {
+  @apply text-sm opacity-75;
+}
+.footnote-backref {
+  display: none;
+}
+&lt;/style&gt;
+
+&lt;!--
+Notes can also sync with clicks
+
+[click] This will be highlighted after the first click
+
+[click] Highlighted with `count = ref(0)`
+
+[click:3] Last click (skip two clicks)
+--&gt;
+
+---
+
+## level: 2
+
+# Shiki Magic Move
+
+Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
+
+Add multiple code blocks and wrap them with &lt;code&gt;````md magic-move&lt;/code&gt; (four backticks) to enable the magic move. For example:
+
+````md magic-move {lines: true}
+```ts {*|2|*}
+// step 1
+const author = reactive({
+  name: "John Doe",
+  books: ["Vue 2 - Advanced Guide", "Vue 3 - Basic Guide", "Vue 4 - The Mystery"],
+});
+</code></pre></div></div> <p>```ts {*|1-2|3-4|3-4,8} // step 2 export default { data() { return { author: { name: “John Doe”, books: [“Vue 2 - Advanced Guide”, “Vue 3 - Basic Guide”, “Vue 4 - The Mystery”], }, }; }, };</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+```ts
+// step 3
+export default {
+  data: () =&gt; ({
+    author: {
+      name: "John Doe",
+      books: ["Vue 2 - Advanced Guide", "Vue 3 - Basic Guide", "Vue 4 - The Mystery"],
+    },
+  }),
+};
+</code></pre></div></div> <p>Non-code blocks are ignored.</p> <div class="language-vue highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- step 4 --&gt;</span>
+<span class="nt">&lt;</span><span class="k">script</span> <span class="na">setup</span><span class="nt">&gt;</span>
+<span class="kd">const</span> <span class="nx">author</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">John Doe</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">books</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">Vue 2 - Advanced Guide</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Vue 3 - Basic Guide</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Vue 4 - The Mystery</span><span class="dl">"</span><span class="p">],</span>
+<span class="p">};</span>
+<span class="nt">&lt;/</span><span class="k">script</span><span class="nt">&gt;</span>
+</code></pre></div></div> <pre><code class="language-`">
+---
+
+# Components
+
+&lt;div grid="~ cols-2 gap-4"&gt;
+&lt;div&gt;
+
+You can use Vue components directly inside your slides.
+
+We have provided a few built-in components like `&lt;Tweet/&gt;` and `&lt;Youtube/&gt;` that you can use directly. And adding your custom components is also super easy.
+
+```html
+&lt;Counter :count="10" /&gt;
+</code></pre> <p>&lt;Counter :count=”10” m=”t-4” /&gt;</p> <p>Check out <a href="https://sli.dev/builtin/components.html" rel="external nofollow noopener" target="_blank">the guides</a> for more.</p> <p>&lt;/div&gt;</p> <div> ```html <tweet id="1390115482657726468"></tweet> ``` <tweet id="1390115482657726468" scale="0.65"></tweet> </div> <p>&lt;/div&gt;</p> <hr> <h2 id="class-px-20">class: px-20</h2> <h1 id="themes">Themes</h1> <p>Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just <strong>one edit</strong> in your frontmatter:</p> <div grid="~ cols-2 gap-2" m="t-2"> ```yaml --- theme: default --- ``` ```yaml --- theme: seriph --- ``` <img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt=""> <img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt=""> </div> <p>Read more about <a href="https://sli.dev/guide/theme-addon#use-theme" rel="external nofollow noopener" target="_blank">How to use a theme</a> and check out the <a href="https://sli.dev/resources/theme-gallery" rel="external nofollow noopener" target="_blank">Awesome Themes Gallery</a>.</p> <hr> <h1 id="clicks-animations">Clicks Animations</h1> <p>You can add <code class="language-plaintext highlighter-rouge">v-click</code> to elements to add a click animation.</p> <div v-click=""> This shows up when you click the slide: ```html <div v-click="">This shows up when you click the slide.</div> ``` </div> <p><br></p> <v-click> The <span v-mark.red="3"><code>v-mark</code> directive</span> also allows you to add <span v-mark.circle.orange="4">inline marks</span> , powered by [Rough Notation](https://roughnotation.com/): ```html <span v-mark.underline.orange="">inline markers</span> ``` </v-click> <div mt-20="" v-click=""> [Learn more](https://sli.dev/guide/animations#click-animation) </div> <hr> <h1 id="motions">Motions</h1> <p>Motion animations are powered by <a href="https://motion.vueuse.org/" rel="external nofollow noopener" target="_blank">@vueuse/motion</a>, triggered by <code class="language-plaintext highlighter-rouge">v-motion</code> directive.</p> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">v-motion</span> <span class="na">:initial=</span><span class="s">"{ x: -80 }"</span> <span class="na">:enter=</span><span class="s">"{ x: 0 }"</span> <span class="na">:click-3=</span><span class="s">"{ x: 80 }"</span> <span class="na">:leave=</span><span class="s">"{ x: 1000 }"</span><span class="nt">&gt;</span>Slidev<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div> <div class="w-60 relative"> <div class="relative w-40 h-40"> &lt;img v-motion :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }" :enter="final" class="absolute inset-0" src="https://sli.dev/logo-square.png" alt="" /&gt; &lt;img v-motion :initial="{ y: 500, x: -100, scale: 2 }" :enter="final" class="absolute inset-0" src="https://sli.dev/logo-circle.png" alt="" /&gt; &lt;img v-motion :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }" :enter="final" class="absolute inset-0" src="https://sli.dev/logo-triangle.png" alt="" /&gt; </div> &lt;div class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1" v-motion :initial="{ x: -80, opacity: 0}" :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }"&gt; Slidev </div> <p>&lt;/div&gt;</p> <script setup="" lang="ts">
+const final = {
+  x: 0,
+  y: 0,
+  rotate: 0,
+  scale: 1,
+  transition: {
+    type: 'spring',
+    damping: 10,
+    stiffness: 20,
+    mass: 2
+  }
+}
+</script> <p>&lt;div v-motion :initial=”{ x:35, y: 30, opacity: 0}” :enter=”{ y: 0, opacity: 1, transition: { delay: 3500 } }”&gt;</p> <p><a href="https://sli.dev/guide/animations.html#motion" rel="external nofollow noopener" target="_blank">Learn more</a></p> <p>&lt;/div&gt;</p> <hr> <h1 id="latex">LaTeX</h1> <p>LaTeX is supported out-of-box. Powered by <a href="https://katex.org/" rel="external nofollow noopener" target="_blank">KaTeX</a>.</p> <div h-3=""></div> <p>Inline $\sqrt{3x-1}+(1+x)^2$</p> <p>Block</p> \[{1|3|all} \begin{aligned} \nabla \cdot \vec{E} &amp;= \frac{\rho}{\varepsilon_0} \\ \nabla \cdot \vec{B} &amp;= 0 \\ \nabla \times \vec{E} &amp;= -\frac{\partial\vec{B}}{\partial t} \\ \nabla \times \vec{B} &amp;= \mu_0\vec{J} + \mu_0\varepsilon_0\frac{\partial\vec{E}}{\partial t} \end{aligned}\] <p><a href="https://sli.dev/features/latex" rel="external nofollow noopener" target="_blank">Learn more</a></p> <hr> <h1 id="diagrams">Diagrams</h1> <p>You can create diagrams / graphs from textual descriptions, directly in your Markdown.</p> <div class="grid grid-cols-4 gap-5 pt-4 -mb-6"> ```mermaid {scale: 0.5, alt: 'A simple sequence diagram'} sequenceDiagram Alice-&gt;John: Hello John, how are you? Note over Alice,John: A typical interaction ``` ```mermaid {theme: 'neutral', scale: 0.8} graph TD B[Text] --&gt; C{Decision} C --&gt;|One| D[Result 1] C --&gt;|Two| E[Result 2] ``` ```mermaid mindmap root((mindmap)) Origins Long history ::icon(fa fa-book) Popularisation British popular psychology author Tony Buzan Research On effectiveness<br>and features On Automatic creation Uses Creative techniques Strategic planning Argument mapping Tools Pen and paper Mermaid ``` ```plantuml {scale: 0.7} @startuml package "Some Group" { HTTP - [First Component] [Another Component] } node "Other Groups" { FTP - [Second Component] [First Component] --&gt; FTP } cloud { [Example 1] } database "MySql" { folder "This is my folder" { [Folder 3] } frame "Foo" { [Frame 4] } } [Another Component] --&gt; [Example 1] [Example 1] --&gt; [Folder 3] [Folder 3] --&gt; [Frame 4] @enduml ``` </div> <p>Learn more: <a href="https://sli.dev/features/mermaid" rel="external nofollow noopener" target="_blank">Mermaid Diagrams</a> and <a href="https://sli.dev/features/plantuml" rel="external nofollow noopener" target="_blank">PlantUML Diagrams</a></p> <hr> <p>foo: bar dragPos: square: 691,32,167,_,-16</p> <hr> <h1 id="draggable-elements">Draggable Elements</h1> <p>Double-click on the draggable elements to edit their positions.</p> <p><br></p> <h6 id="directive-usage">Directive Usage</h6> <div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">v-drag=</span><span class="s">"'square'"</span> <span class="na">src=</span><span class="s">"https://sli.dev/logo.png"</span><span class="nt">&gt;</span>
+</code></pre></div></div> <p><br></p> <h6 id="component-usage">Component Usage</h6> <div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;v-drag</span> <span class="na">text-3xl</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"i-carbon:arrow-up"</span> <span class="nt">/&gt;</span>
+  Use the <span class="sb">`v-drag`</span> component to have a draggable container!
+<span class="nt">&lt;/v-drag&gt;</span>
+</code></pre></div></div> <v-drag pos="663,206,261,_,-15"> <div text-center="" text-3xl="" border="" border-main="" rounded=""> Double-click me! </div> </v-drag> <p><img v-drag="'square'" src="https://sli.dev/logo.png"></p> <h6 id="draggable-arrow">Draggable Arrow</h6> <div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;v-drag-arrow</span> <span class="na">two-way</span> <span class="nt">/&gt;</span>
+</code></pre></div></div> <v-drag-arrow pos="67,452,253,46" two-way="" op70=""></v-drag-arrow> <hr> <p>src: ./pages/imported-slides.md hide: false</p> <hr> <hr> <h1 id="monaco-editor">Monaco Editor</h1> <p>Slidev provides built-in Monaco Editor support.</p> <p>Add <code class="language-plaintext highlighter-rouge">{monaco}</code> to the code block to turn it into an editor:</p> <p>```ts {monaco} import { ref } from “vue”; import { emptyArray } from “./external”;</p> <p>const arr = ref(emptyArray(10));</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+Use `{monaco-run}` to create an editor that can execute the code directly in the slide:
+
+```ts {monaco-run}
+import { version } from "vue";
+import { emptyArray, sayHello } from "./external";
+
+sayHello();
+console.log(`vue ${version}`);
+console.log(emptyArray&lt;number&gt;(10).reduce((fib) =&gt; [...fib, fib.at(-1)! + fib.at(-2)!], [1, 1]));
+</code></pre></div></div> <hr> <p>layout: center class: text-center</p> <hr> <h1 id="learn-more">Learn More</h1> <p><a href="https://sli.dev" rel="external nofollow noopener" target="_blank">Documentation</a> · <a href="https://github.com/slidevjs/slidev" rel="external nofollow noopener" target="_blank">GitHub</a> · <a href="https://sli.dev/resources/showcases" rel="external nofollow noopener" target="_blank">Showcases</a></p> <poweredbyslidev mt-10=""></poweredbyslidev> </body></html>

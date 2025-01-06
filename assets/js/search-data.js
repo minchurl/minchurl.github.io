@@ -23,15 +23,15 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-a-post-with-image-galleries",
+        },{id: "post-2024년-회고록",
       
-        title: "a post with image galleries",
+        title: "2024년 회고록",
       
-      description: "this is what included image galleries could look like",
+      description: "2024년을 뒤늦게라도 복기하자",
       section: "Posts",
       handler: () => {
         
-          window.location.href = "/blog/2024/photo-gallery/";
+          window.location.href = "/blog/2025/review-2024/";
         
       },
     },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
