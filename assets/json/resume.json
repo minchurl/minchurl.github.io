@@ -15,14 +15,6 @@
   },
   "work": [
     {
-      "name": "Toss Bank",
-      "position": "Backend developer",
-      "url": "https://www.tossbank.com",
-      "startDate": "2025-02-24",
-      "summary": "SWE intern",
-      "highlights": ["Kotlin", "Spring"]
-    },
-    {
       "name": "Someple",
       "position": "Fullstack developer",
       "url": "https://www.someple.com",
