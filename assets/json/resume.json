@@ -67,11 +67,7 @@
     {
       "name": "Competitive Programming",
       "level": "Master",
-      "keywords": [
-        "ICPC",
-        "Coding Test",
-        "Codeforces"
-      ]
+      "keywords": ["ICPC", "Coding Test", "Codeforces"]
     }
   ],
   "languages": [
@@ -89,9 +85,7 @@
   "interests": [
     {
       "name": "System Programming",
-      "keywords": [
-        "File System"
-      ]
+      "keywords": ["File System"]
     }
   ],
   "projects": [
